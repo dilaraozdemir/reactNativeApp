@@ -3,8 +3,8 @@ import { Scene, Router , Stack } from 'react-native-router-flux';
 
 
 import Login from './src/screens/Login';
-import Login from './src/screens/Register';
-import Login from './src/screens/Home';
+import Register from './src/screens/Register';
+import Home from './src/screens/Home';
 
 export default class App extends Component {
   render() {
