@@ -7,6 +7,7 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import Login from './src/screens/Login';
 import Register from './src/screens/Register';
 import Home from './src/screens/Home';
+<<<<<<< HEAD
 
 
 EStyleSheet.build({
@@ -15,6 +16,8 @@ EStyleSheet.build({
   $fontSize: Platform.OS == 'ios' ? 18 : 16,
 
 });
+=======
+>>>>>>> 9bd6a13980c4346ece84b2e80e3a0fc84ee962e1
 
 export default class App extends Component {
   render() {
