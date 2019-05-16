@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux'; 
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Home = () =>{
     return(
-        <View>
+        <SafeAreaView>
             <Text>Home</Text>
             <Button
                 icon={
@@ -20,7 +20,7 @@ const Home = () =>{
             }
             title="Login"
             onPress={() => {
-                Actions.register();
+                Actions.login();
             }}
             />
             
@@ -32,14 +32,14 @@ const Home = () =>{
                     color="white"
             />
             }
-            title="REgister"
+            title="Register"
             buttonstyle={{ marginTop: 10 }}
             onPress={() => {
                 console.log('go to register');
-                Actions.register();
+                Actions.register({username: 'dilara'});
             }}
             />
-        </View>
+        </SafeAreaView>
     );
     
 };

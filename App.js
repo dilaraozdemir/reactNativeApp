@@ -1,15 +1,26 @@
 import React, {Component} from 'react';
 import { Scene, Router , Stack } from 'react-native-router-flux';
+import { StatusBar } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 
 import Login from './src/screens/Login';
-import Login from './src/screens/Register';
-import Login from './src/screens/Home';
+import Register from './src/screens/Register';
+import Home from './src/screens/Home';
+
+
+EStyleSheet.build({
+  $textColor: '#f1f1f1',
+  $backColor: '#000',
+  $fontSize: Platform.OS == 'ios' ? 18 : 16,
+
+});
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
+    <>
+      <StatusBar backgroundColor="blue" barStyle="light-content" />
           <Router>
             <Stack key="root">
               <Scene key="login" component={Login} title="Login" back={true}  />
@@ -17,7 +28,7 @@ export default class App extends Component {
               <Scene initial key="home" component={Home} title="Home" />
             </Stack>
           </Router>
-      </View>
-    );
-  }
-}
+    </>
+    );  
+  };
+};
